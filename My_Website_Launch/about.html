@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Stats Test</title>
+        <script language="JavaScript" type="text/javascript" src="js/VisitorAPI.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/AppMeasurement.js"></script>
+        <title>Stats Test</title>
+        <script language="JavaScript" type="text/javascript" src="js/VisitorAPI.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/AppMeasurement.js"></script>
+    </head>
+    <body>
+        <script>
+var v_orgId = "69AA402551915FB10A490D4D@AdobeOrg";
+var s_account = "lscstestingharish";
+var s_trackingServer = "cardgagecorp.d1.sc.omtrdc.net";
+var s_visitorNamespace = "cardgagecorp";
+var visitor = Visitor.getInstance(v_orgId);
+visitor.trackingServer = s_trackingServer;
+var s = s_gi(s_account);
+s.account = s_account;
+s.trackingServer = s_trackingServer;
+s.visitorNamespace = s_visitorNamespace;
+s.visitor = visitor;
+s.pageName = s.Util.getQueryParam("gn");
+s.events=s.Util.getQueryParam("events");
+s.eVar1=s.Util.getQueryParam("v1");
+s.eVar2=s.Util.getQueryParam("v2");
+s.prop1=s.Util.getQueryParam("c1");
+s.state=s.Util.getQueryParam("state");
+s.campaign=s.Util.getQueryParam("campaign");
+s.pageURL=s.Util.getQueryParam("pageURL");
+s.referrer=s.Util.getQueryParam("ref");
+s.t();
+</script>
+    </body>
+</html>

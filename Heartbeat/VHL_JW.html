@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title>Video Samples: YouTube iFrame Heartbeat</title>
+<script>
+		dataLayer = {
+			"pagename":"JW Player Heartbeat without DTM",
+			"videoDetails" : {
+				"player" : "JW player Video HeartBeat Single Player"
+			}
+		}
+		</script>
+               
+                <script language="JavaScript" type="text/javascript" src="http://content.jwplatform.com/libraries/DgibQzUA.js"></script>
+</head>
+<body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="AppMeasurement/VisitorAPI.js" type="text/javascript"></script>
+<script src="AppMeasurement/AppMeasurement.js" type="text/javascript"></script>
+<script src="AppMeasurement/VideoHeartbeat.min.js" type="text/javascript"></script>
+<script src="js/HeartbearBridge.js" type="text/javascript"></script>
+<script src="js/JWDelegate.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/**s.pageName="Video:Samples:YouTube Heartbeat";
+s.channel="Video";
+s.eVar12="Training";
+s.events="event1";
+var s_code=s.t();
+if(s_code)document.write(s_code)**/
+//--></script>
+
+<h2>JW Player 6.12 with Heartbeat without DTM</h2>
+        
+<div id='myElement'>Loading the player ...</div>
+<script type='text/javascript'>
+  jwplayer('myElement').setup({ 
+  aspectratio: "16:9",
+  autostart: false,
+  controls: true,
+  displaytitle: true,
+  flashplayer: "http://assets-jpcust.jwpsrv.com/player/6/6124956/jwplayer.flash.swf",
+  height: 270,
+  html5player: "http://assets-jpcust.jwpsrv.com/player/6/6124956/jwplayer.html5.js",
+  listbar: {"position": "right", "layout": "extended", "size": 200},
+  mute: false,
+  ph: 1,
+  playlist: "https://content.jwplatform.com/jw6/mZNChTXt.xml",
+  plugins: {"http://assets-jpcust.jwpsrv.com/player/6/6124956/ping.js": {"pixel": "https://content.jwplatform.com/ping.gif"}},
+  primary: "flash",
+  related: {"oncomplete": true, "file": "https://content.jwplatform.com/related6/MEDIAID.xml"},
+  repeat: false,
+  sharing: {"code": "%3Ciframe%20src%3D%22http%3A//content.jwplatform.com/players/MEDIAID-DgibQzUA.html%22%20width%3D%22480%22%20height%3D%22270%22%20frameborder%3D%220%22%20scrolling%3D%22auto%22%3E%3C/iframe%3E", "link": "http://content.jwplatform.com/previews/MEDIAID-DgibQzUA"},
+  stagevideo: false,
+  stretching: "uniform",
+  width: "50%"
+  }                              
+);
+trackHeartbeat();
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5 sample player: Adobe Video Analytics</title>
+<link rel="stylesheet" href="style/base.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<h2>HTML5 sample player</h2>
+<video id="movie" width="600" preload controls name="13502979:Sailing">
+<source src="video/sample.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+<source src="video/sample.mp4" type='video/webm; codecs="vp8, vorbis"'>
+<source src="video/sample.mp4" type='video/ogg; codes="theora, vorbis"'>
+</video>
+<p>
+See API documentation here: <a href="http://www.w3.org/2010/05/video/mediaevents.html">http://www.w3.org/2010/05/video/mediaevents.html</a>
+</p>
+<script type="text/javascript">
+myvideo = document.getElementById('movie');
+myvideo.addEventListener('play',myHandler,false);
+myvideo.addEventListener('seeked',myHandler,false);
+myvideo.addEventListener('seeking',myHandler,false);
+myvideo.addEventListener('pause',myHandler,false);
+myvideo.addEventListener('ended',myHandler,false);
+
+function myHandler(e) {
+var video = document.getElementsByTagName('video')[0];
+var mediaPlayerName = "HTML5 Player";
+/*Define video offset*/
+if (video.currentTime > 0) {
+mediaOffset = Math.floor(video.currentTime);
+} else {
+mediaOffset = 0;
+};
+/*Call on video start*/
+if (e.type == "play") {
+if (mediaOffset == 0) {
+	console.log(mediaPlayerName +' -> start -> playhead: ' + Math.floor(video.currentTime));
+
+} else {
+	console.log(mediaPlayerName +' -> play -> playhead: ' + Math.floor(video.currentTime));
+};
+};
+/*Call on scrub start*/
+if (e.type == "seeking") {
+	console.log(mediaPlayerName +' -> seeking -> playhead: ' + Math.floor(video.currentTime));
+};
+/*Call on scrub stop*/
+if (e.type == "seeked") {
+	console.log(mediaPlayerName +' -> seeked -> playhead: ' + Math.floor(video.currentTime));
+};
+/*Call on pause*/
+if (e.type == "pause") {
+	console.log(mediaPlayerName +' -> pause -> playhead: ' + Math.floor(video.currentTime));
+};
+/*Call on video complete*/
+if (e.type == "ended") {
+	console.log(mediaPlayerName +' -> ended -> playhead: ' + Math.floor(video.currentTime));
+};
+};
+</script>
+
+</body>
+</html>
